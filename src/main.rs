@@ -14,7 +14,7 @@ async fn main() {
     }
     let directory_to_upload = &args[1];
 
-    dotenv::dotenv().unwrap();
+    dotenv::dotenv().ok();
 
     let bucket = s3_uploader::initialize_bucket();
 
