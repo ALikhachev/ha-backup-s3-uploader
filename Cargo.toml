@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
+dotenv = "0.15.0"
+rust-s3 = "0.35.1"
+tokio = { version = "1.42.0", features = ["rt", "rt-multi-thread", "macros"] }
