@@ -9,3 +9,4 @@ rust-s3 = "0.35.1"
 serde_json = "1.0.134"
 tar = "0.4.43"
 tokio = { version = "1.42.0", features = ["rt", "rt-multi-thread", "macros"] }
+openssl = { version = "0.10.68", features = ["vendored"] }
