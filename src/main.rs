@@ -1,3 +1,4 @@
+mod home_assistant;
 mod s3_uploader;
 
 use std::fs;
@@ -26,7 +27,13 @@ async fn main() {
     for entry in files {
         let entry = entry.unwrap();
         let path = entry.path();
-        let s3_key = path.file_name().unwrap().to_string_lossy();
+        let s3_key = match home_assistant::extract_file_name(path.to_str().unwrap()) {
+            Ok(name) => format!("{}.tar", name),
+            Err(e) => {
+                eprintln!("Failed to extract file name for key: {}", e);
+                return; // Skip uploading if extraction fails
+            }
+        };
 
         if path.is_file() {
             match s3_uploader::upload_file_to_s3(&bucket, path.to_str().unwrap(), &s3_key).await {
