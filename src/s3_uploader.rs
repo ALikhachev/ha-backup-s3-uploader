@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2024 Alexander Likhachev
+ * Licensed under the MIT License. See LICENSE file for details.
+ */
+
 use s3::creds::Credentials;
 use s3::{Bucket, Region};
 

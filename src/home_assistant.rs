@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2024 Alexander Likhachev
+ * Licensed under the MIT License. See LICENSE file for details.
+ */
+
 use std::fs::File;
 use std::io::Read;
 use tar::Archive;

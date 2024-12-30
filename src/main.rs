@@ -1,3 +1,8 @@
+/*
+ * Copyright (c) 2024 Alexander Likhachev
+ * Licensed under the MIT License. See LICENSE file for details.
+ */
+
 mod home_assistant;
 mod s3_uploader;
 
