@@ -1,4 +1,4 @@
-# Home Assistant Backup S3 Uploader
+# Home Assistant Backup S3 Uploader [![Docker Image Version](https://img.shields.io/docker/v/alexlikhachev/ha-backup-s3-uploader)](https://hub.docker.com/r/alexlikhachev/ha-backup-s3-uploader) ![GitHub License](https://img.shields.io/github/license/ALikhachev/ha-backup-s3-uploader)
 
 A simple tool for uploading Home Assistant backups to S3 or S3-compatible storage (like Minio). Built as an experiment
 to explore the Rust ecosystem!
